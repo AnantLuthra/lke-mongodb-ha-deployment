@@ -1,0 +1,15 @@
+architecture: replicaset
+replicaCount: 3
+persistence:
+  storageClass: "linode-block-storage"
+auth:
+  rootPassword: secret-root-pwd
+image:
+  registry: docker.io
+  tag: latest
+  repository: bitnamisecure/mongodb
+global:
+  security:
+    allowInsecureImages: True
+metrics:
+  enabled: false
